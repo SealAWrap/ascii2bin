@@ -18,7 +18,7 @@ The description of this assignment also includes more detailed information about
 # Assignment
 Your task is to develop a C program, called ascii2bin, that
   * reads a string of 1's and 0's as ASCII digits, and 
-  * outputs the equivalent decimal number 
+  * outputs the equivalent unsigned decimal number 
 
 Your program must
   1. exercises the read() system call to read a single byte, at a time, from stdin
@@ -28,7 +28,7 @@ Your program must
   1. identifies the end of a input string by either end of file or by a new line
       *  End of file is detected when read() returns the value '0'
       *  A new line is identified in the ASCII table as either: newline, nl, LF, or \n'
-  1. prints this final number on stdout
+  1. prints this final unsigned number on stdout
   1. returns a value of 0 upon success and 1 otherwise
 
 
@@ -43,7 +43,7 @@ Your program must
         number = (number << 1) + digit;  
         retval = read(0, &ascii_value, 1);
         
-    printf("%d\n", number);
+    printf("%u\n", number);
     return 0;
 ```
 
