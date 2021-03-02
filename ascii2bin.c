@@ -7,5 +7,5 @@ while (retval == 1)
     number = (number << 1) + digit;  
     retval = read(0, &ascii_value, 1);
         
-printf("%d\n", number);
+printf("%u\n", number);
 return 0;
