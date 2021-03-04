@@ -4,7 +4,7 @@
 
 int main (int argc, char * argv[], char ** envp) {
 
-    int offset = 48;
+    char offset = 0x30;  //0x30 is the octal base of decmial 48
     int number = 0;
     int retval;
     char ascii_value, digit;
@@ -12,7 +12,7 @@ int main (int argc, char * argv[], char ** envp) {
         
     retval = read(0, &ascii_value, 1);
     while (retval == 1) {
-        if (ascii_value == offset || ascii_value == offset + 1) {
+        if (ascii_value == offset || ascii_value == 0x31) {
             digit = ascii_value - offset;
             number = (number << 1) + digit;  
             retval = read(0, &ascii_value, 1);
@@ -20,7 +20,7 @@ int main (int argc, char * argv[], char ** envp) {
             retval = 0;
         }
     }
-    
+
     printf("%u\n", number);
     return 0;
 }
