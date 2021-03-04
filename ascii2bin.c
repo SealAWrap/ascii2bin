@@ -1,4 +1,4 @@
-offset = 1;
+offset = 48;
 number = 0;
     
 retval = read(0, &ascii_value, 1);
