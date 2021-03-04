@@ -8,7 +8,6 @@ int main (int argc, char * argv[], char ** envp) {
     int number = 0;
     int retval;
     char ascii_value, digit;
-    int number;
         
     retval = read(0, &ascii_value, 1);
     while (retval == 1) {
